@@ -31,5 +31,5 @@ fi
 echo -e "\nReady to execute jar..."
 
 chmod +x ./momo/momo-0.0.1-SNAPSHOT.jar
-nohup java -jar "${JAR_PATH}" --spring.profiles.active="${PROFILE}" >>"${LOG_FILE}" 2>/dev/null &
+nohup java -jar "${JAR_PATH}" --spring.profiles.active="${PROFILE}" -Duser.timezone="Asia/Seoul" >> "${LOG_FILE}" 2>/dev/null &
 echo "  > Jar Execute Success!!"
